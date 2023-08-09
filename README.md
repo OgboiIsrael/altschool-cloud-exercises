@@ -1,2 +1,2 @@
 # altschool-cloud-exercises
-ALX cloud tasks
+ALT cloud tasks
