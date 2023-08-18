@@ -1,2 +1,2 @@
-# altschool-cloud-exercises
+# AltSchool-Cloud-Exercises
 ALT cloud tasks
