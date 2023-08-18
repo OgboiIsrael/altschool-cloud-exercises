@@ -89,8 +89,6 @@ Input command
 
 ![](assets/result.png)
 
-![]
-
 ***
 
 ### Create User that doesnt have a home directory
