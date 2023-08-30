@@ -1,35 +1,19 @@
 #!/bin/bash
 
-#declare variable to accept file directory as input
-#dpath=$1
 dpath=($@)
-echo ${#dpath[*]} #to know the size of the array
+echo ${#dpath[*]} 'is the size of the array'
 num=${#dpath[*]}-1
-#echo $dpath
 
 prypath=$(pwd)
-echo $prypath
+pwd
 
-#option=(a d)
-#read -p "Sorting option: a or d"$'\n' useroption
-#index=0
-#for i in "${!option[@]}"; do
-#	[[ "${option[$i]}" = "${useroption}" ]]
-#       	echo $i
-#	break
-#done
-#echo $option
-#	if ("${option[$i]}"="${useroption}")
-#	then
-#		index=$i
-#		break
-#	fi
-#done
-#echo $index
-#for (i=1; i<=num; i++);
+read -p 'Select your options for sorting? a or d'$'\n' useroption
 
-#echo Do you want options for sorting? a or d
-read -p 'Do you want options for sorting? a or d'$'\n' useroption
+while [[ "$useroption" != "a" ]] && [[ "$useroption" != "d" ]]
+do {
+	read -p 'You have selected the wrong option'$'\n''choose between a or d'$'\n' useroption
+} 
+done
 
 for (( i=0; i<=num; i++)) {
 	cd "$prypath/${dpath[$i]}";
@@ -38,9 +22,8 @@ for (( i=0; i<=num; i++)) {
 	echo "ls -$useroption";
 	if [ "$useroption" == "a" ]; then
 		useroption="d"
-	elif [ "$useroption" == "d" ]; then
+	else [ "$useroption" == "d" ]
 		useroption="a"
-	else [[ "$useropton" != 'a' ]] && [[ "$useroption" != 'd' ]]
-		echo "You have selected the wrong option"
 	fi
 }
+
