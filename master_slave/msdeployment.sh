@@ -98,7 +98,7 @@ rsync -avz /mnt/AltSchool/ $NewUser@$IP_Slave:/mnt/AltSchool/slave/
 echo "Overview of currently running processes on Master:"
 ps aux
 exit
-
+exit
 
 # Connects slave to master for management
 echo "Connecting slave to master for management..."
